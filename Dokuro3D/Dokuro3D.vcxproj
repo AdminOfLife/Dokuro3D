@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlignedVector.hpp" />
+    <ClInclude Include="Camera\Camera.hpp" />
+    <ClInclude Include="GraphicsMemory\DrawBuffer.hpp" />
+    <ClInclude Include="GraphicsMemory\GraphicsMemory.hpp" />
+    <ClInclude Include="GraphicsMemory\VertexBuffer.hpp" />
+    <ClInclude Include="IncludedLibraries\Devil\config.h" />
+    <ClInclude Include="IncludedLibraries\Devil\devil_internal_exports.h" />
+    <ClInclude Include="IncludedLibraries\Devil\il.h" />
+    <ClInclude Include="IncludedLibraries\Devil\ilu.h" />
+    <ClInclude Include="IncludedLibraries\Devil\ilut.h" />
+    <ClInclude Include="IncludedLibraries\Devil\ilut_config.h" />
+    <ClInclude Include="IncludedLibraries\Devil\ilu_region.h" />
+    <ClInclude Include="IncludedLibraries\Devil\il_wrap.h" />
+    <ClInclude Include="Lights\DirectionalLight.hpp" />
+    <ClInclude Include="Exceptions\DokuroException.hpp" />
+    <ClInclude Include="Exceptions\FactoryProductionException.hpp" />
+    <ClInclude Include="Exceptions\OutOfBoundsException.hpp" />
+    <ClInclude Include="Lights\AmbientLight.hpp" />
+    <ClInclude Include="Lights\LightInfo.hpp" />
+    <ClInclude Include="Lights\PointLight.hpp" />
+    <ClInclude Include="Lights\SpotLight.hpp" />
+    <ClInclude Include="Maths\Matrix.hpp" />
+    <ClInclude Include="Maths\Matrix4.hpp" />
+    <ClInclude Include="Maths\MatrixStack.hpp" />
+    <ClInclude Include="Maths\SSEMatrix.hpp" />
+    <ClInclude Include="Maths\SSEVector.hpp" />
+    <ClInclude Include="Maths\SSEVectorInteger.hpp" />
+    <ClInclude Include="Maths\Vector4.hpp" />
+    <ClInclude Include="Models\anorms.h" />
+    <ClInclude Include="Models\ModelMD2.hpp" />
+    <ClInclude Include="Renderer\Color.hpp" />
+    <ClInclude Include="Renderer\IRenderTarget.hpp" />
+    <ClInclude Include="Renderer\Texture2D.hpp" />
+    <ClInclude Include="Threads\Event\IEvent.hpp" />
+    <ClInclude Include="Threads\IRunnable.hpp" />
+    <ClInclude Include="Threads\IThread.hpp" />
+    <ClInclude Include="Threads\Mutexes\IMutex.hpp" />
+    <ClInclude Include="Threads\ThreadFactory.hpp" />
+    <ClInclude Include="Transformer\Transformer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera\Camera.cpp" />
+    <ClCompile Include="Exceptions\DokuroException.cpp" />
+    <ClCompile Include="Exceptions\FactoryProductionException.cpp" />
+    <ClCompile Include="GraphicsMemory\DrawBuffer.cpp" />
+    <ClCompile Include="GraphicsMemory\GraphicsMemory.cpp" />
+    <ClCompile Include="GraphicsMemory\VertexBuffer.cpp" />
+    <ClCompile Include="Lights\AmbientLight.cpp" />
+    <ClCompile Include="Lights\DirectonalLight.cpp" />
+    <ClCompile Include="Lights\LightInfo.cpp" />
+    <ClCompile Include="Lights\PointLight.cpp" />
+    <ClCompile Include="Lights\SpotLight.cpp" />
+    <ClCompile Include="Maths\Matrix.cpp" />
+    <ClCompile Include="Maths\Matrix4.cpp" />
+    <ClCompile Include="Maths\SSEMatrix.cpp" />
+    <ClCompile Include="Maths\SSEVector.cpp" />
+    <ClCompile Include="Maths\SSEVectorInteger.cpp" />
+    <ClCompile Include="Maths\Vector4.cpp" />
+    <ClCompile Include="Models\ModelMD2.cpp" />
+    <ClCompile Include="Renderer\Color.cpp" />
+    <ClCompile Include="Renderer\IRenderTarget.cpp" />
+    <ClCompile Include="Exceptions\OutOfBoundsException.cpp" />
+    <ClCompile Include="Renderer\Texture2D.cpp" />
+    <ClCompile Include="Threads\Event\IEvent.cpp" />
+    <ClCompile Include="Threads\IRunnable.cpp" />
+    <ClCompile Include="Threads\IThread.cpp" />
+    <ClCompile Include="Threads\Mutexes\IMutex.cpp" />
+    <ClCompile Include="Threads\ThreadFactory.cpp" />
+    <ClCompile Include="Transformer\Transformer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IncludedLibraries\Devil\config.h.win" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5577F8A1-5144-4EF0-9B97-96A5B7049652}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Dokuro3D</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <AdditionalOptions>/O2 /Ob2 %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

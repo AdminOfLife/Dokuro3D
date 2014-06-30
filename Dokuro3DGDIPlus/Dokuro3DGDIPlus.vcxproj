@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC9A3CF0-9DF5-448C-AED4-0B3E18A221B2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Dokuro3DGDIPlus</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../Dokuro3D;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gdiplus.lib;$(MSBuildStartupDirectory)/Dokuro3D/IncludedLibraries/Devil/DevIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(MSBuildStartupDirectory)\Dokuro3D\IncludedLibraries\Devil\DevIL.dll $(MSBuildStartupDirectory)\Debug/DevIL.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Dokuro3D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(MSBuildStartupDirectory)/Dokuro3D/IncludedLibraries/Devil/DevIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(MSBuildStartupDirectory)\Dokuro3D\IncludedLibraries\Devil\DevIL.dll $(MSBuildStartupDirectory)\Release\DevIL.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Dokuro3DGDIPlus.ico" />
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera\FPSCamera.hpp" />
+    <ClInclude Include="Demo\Demos\CameraDemo2\CameraDemo2.hpp" />
+    <ClInclude Include="Demo\Demo.hpp" />
+    <ClInclude Include="Demo\DemoManager.hpp" />
+    <ClInclude Include="Demo\Demos\SolidDemo\SolidDemo.hpp" />
+    <ClInclude Include="Demo\Demos\SolidLitDemo\SolidLitDemo.hpp" />
+    <ClInclude Include="Demo\Demos\SpecularModel\SpecularModelDemo.hpp" />
+    <ClInclude Include="Demo\Demos\WireframeDemo\WireframeDemo.hpp" />
+    <ClInclude Include="Demo\Demos\SpecularModelSmooth\SpecularModelSmoothDemo.hpp" />
+    <ClInclude Include="Demo\Demos\SpecularModelPhong\SpecularModelPhongDemo.hpp" />
+    <ClInclude Include="Demo\Demos\PaintersSortDemo\PaintersSortDemo.hpp" />
+    <ClInclude Include="Demo\Demos\ZbufferDemo\ZbufferDemo.hpp" />
+    <ClInclude Include="Demo\Demos\PointLightDemo\PointLightDemo.hpp" />
+    <ClInclude Include="Demo\Demos\TexturePhongDemo\TexturePhongDemo.hpp" />
+    <ClInclude Include="Demo\Demos\AnimatedDemo\AnimatedDemo.hpp" />
+    <ClInclude Include="Demo\Demos\ResizeDemo\ResizeDemo.hpp" />
+    <ClInclude Include="Demo\Demos\CameraDemo\CameraDemo.hpp" />
+    <ClInclude Include="Demo\Demos\ScaleRotateTranslate\ScaleRotateTranslate.hpp" />
+    <ClInclude Include="Dokuro3DGDIPlus.h" />
+    <ClInclude Include="Game\Game.hpp" />
+    <ClInclude Include="Input\Input.hpp" />
+    <ClInclude Include="Renderer\FastBitmap.hpp" />
+    <ClInclude Include="Renderer\WindowsRenderer.hpp" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Threads\Event\Event.hpp" />
+    <ClInclude Include="Threads\Mutexes\Mutex.hpp" />
+    <ClInclude Include="Threads\Thread.hpp" />
+    <ClInclude Include="Timer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera\FPSCamera.cpp" />
+    <ClCompile Include="Demo\Demos\CameraDemo2\CameraDemo2.cpp" />
+    <ClCompile Include="Demo\Demo.cpp" />
+    <ClCompile Include="Demo\DemoManager.cpp" />
+    <ClCompile Include="Demo\Demos\SolidDemo\SolidDemo.cpp" />
+    <ClCompile Include="Demo\Demos\SolidLitDemo\SolidLitDemo.cpp" />
+    <ClCompile Include="Demo\Demos\SpecularModel\SpecularModelDemo.cpp" />
+    <ClCompile Include="Demo\Demos\WireframeDemo\WireframeDemo.cpp" />
+    <ClCompile Include="Demo\Demos\SpecularModelSmooth\SpecularModelSmoothDemo.cpp" />
+    <ClCompile Include="Demo\Demos\SpecularModelPhong\SpecularModelPhongDemo.cpp" />
+    <ClCompile Include="Demo\Demos\PaintersSortDemo\PaintersSortDemo.cpp" />
+    <ClCompile Include="Demo\Demos\ZbufferDemo\ZbufferDemo.cpp" />
+    <ClCompile Include="Demo\Demos\PointLightDemo\PointLightDemo.cpp" />
+    <ClCompile Include="Demo\Demos\TexturePhongDemo\TexturePhongDemo.cpp" />
+    <ClCompile Include="Demo\Demos\AnimatedDemo\AnimatedDemo.cpp" />
+    <ClCompile Include="Demo\Demos\ResizeDemo\ResizeDemo.cpp" />
+    <ClCompile Include="Demo\Demos\CameraDemo\CameraDemo.cpp" />
+    <ClCompile Include="Demo\Demos\ScaleRotateTranslate\ScaleRotateTranslate.cpp" />
+    <ClCompile Include="Dokuro3DGDIPlus.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Input\Input.cpp" />
+    <ClCompile Include="Renderer\FastBitmap.cpp" />
+    <ClCompile Include="Renderer\WindowsRenderer.cpp" />
+    <ClCompile Include="Threads\Event\Event.cpp" />
+    <ClCompile Include="Threads\Mutexes\Mutex.cpp" />
+    <ClCompile Include="Threads\Thread.cpp" />
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dokuro3DGDIPlus.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dokuro3D\Dokuro3D.vcxproj">
+      <Project>{5577f8a1-5144-4ef0-9b97-96a5b7049652}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

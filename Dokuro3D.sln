@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dokuro3D", "Dokuro3D\Dokuro3D.vcxproj", "{5577F8A1-5144-4EF0-9B97-96A5B7049652}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dokuro3DTest", "Dokuro3DTest\Dokuro3DTest.vcxproj", "{B70B7996-7FB7-4420-81C3-3E05FD5C6FEA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dokuro3DGDIPlus", "Dokuro3DGDIPlus\Dokuro3DGDIPlus.vcxproj", "{DC9A3CF0-9DF5-448C-AED4-0B3E18A221B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C4C9710-6367-4604-AC69-BD0BBE0CAD24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5577F8A1-5144-4EF0-9B97-96A5B7049652}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5577F8A1-5144-4EF0-9B97-96A5B7049652}.Debug|Win32.Build.0 = Debug|Win32
+		{5577F8A1-5144-4EF0-9B97-96A5B7049652}.Release|Win32.ActiveCfg = Release|Win32
+		{5577F8A1-5144-4EF0-9B97-96A5B7049652}.Release|Win32.Build.0 = Release|Win32
+		{B70B7996-7FB7-4420-81C3-3E05FD5C6FEA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B70B7996-7FB7-4420-81C3-3E05FD5C6FEA}.Debug|Win32.Build.0 = Debug|Win32
+		{B70B7996-7FB7-4420-81C3-3E05FD5C6FEA}.Release|Win32.ActiveCfg = Release|Win32
+		{B70B7996-7FB7-4420-81C3-3E05FD5C6FEA}.Release|Win32.Build.0 = Release|Win32
+		{DC9A3CF0-9DF5-448C-AED4-0B3E18A221B2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DC9A3CF0-9DF5-448C-AED4-0B3E18A221B2}.Debug|Win32.Build.0 = Debug|Win32
+		{DC9A3CF0-9DF5-448C-AED4-0B3E18A221B2}.Release|Win32.ActiveCfg = Release|Win32
+		{DC9A3CF0-9DF5-448C-AED4-0B3E18A221B2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
